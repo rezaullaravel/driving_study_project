@@ -1,0 +1,205 @@
+.card {
+	border-radius: 16px;
+	background: hsl(0, 0%, 100%);
+	padding: 14px;
+	border: none;
+
+	@media screen and (min-width: 992px) {
+		padding: 24px;
+	}
+	.card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 24px;
+		padding: 0;
+		margin-bottom: 0;
+		color: inherit;
+		background-color: inherit;
+		border-bottom: none;
+		&:first-child {
+			border-radius: 0;
+
+
+
+
+
+
+
+			
+
+			.card-title {
+				margin-bottom: 0;
+				color: #242424;
+				font-family: 'Plus Jakarta Sans';
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 600;
+				width: auto;
+				line-height: normal;
+			}
+			select {
+				border-radius: 32px;
+				border: 1px solid #f4f5f8;
+				height: 32px;
+				padding-top: 0;
+				padding-bottom: 0;
+				color: #5e5e5e;
+				font-family: 'Plus Jakarta Sans';
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				width: auto;
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+
+// dashboard profile card
+.dashboard_profile-card {
+	overflow: hidden;
+
+
+  
+	.dashboard_profile_wrap {
+	  position: relative;
+  
+	  .profile_photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	  }
+	}
+  
+	.profile_photo::before {
+	  content: "";
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background: var(--dark);
+	  opacity: 0;
+	  transition: all 0.4s;
+	  visibility: hidden;
+	}
+  
+	.profile_photo .photo_upload {
+	  display: inline-block;
+	  padding: 0px 0px 0px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  color: var(--white);
+	  transform: translate(-50%, -50%);
+	}
+  
+	.profile_photo .photo_upload i {
+	  cursor: pointer;
+	  visibility: hidden;
+	  opacity: 0;
+	}
+	.profile_photo:hover .photo_upload i {
+		visibility: visible;
+		opacity: 1;
+	}
+	.profile_photo:hover::before {
+		visibility: visible;
+		opacity: .7;
+	}
+	.contact-info {
+	  padding: 0px 20px;
+	  width: 100%;
+  
+	  .info-wrap {
+		padding: 20px 0px;
+		border-bottom: 1px dashed var(--base-l-500);
+		color: var(--base);
+
+	
+  
+		.info {
+		  display: flex;
+		  justify-content: flex-start;
+		  align-items: center;
+		  gap: 12px;
+		  margin-bottom: 8px;
+		}
+	  }
+
+	  &:last-child{
+		.info-wrap {
+		border-bottom: none;
+		}
+	}
+
+
+	}
+  
+  
+	.user-profile {
+	  position: relative;
+	  overflow: hidden;
+	  padding: 20px;
+	  background: var(--base);
+	}
+  
+	.dashboard_profile_wrap {
+	  position: relative;
+  
+	  .profile-details ul li .user-name {
+		font-weight: 700;
+		font-size: 16px;
+		color: var(--white);
+	  }
+  
+	  .profile_photo {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	  }
+	}
+  
+  }
+
+  .photo_upload input, .photo_upload .drag_area .on-drop, .photo_upload .drag_area.dragover .visible {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+// addons card
+.addons-card{
+
+	.title-wrap{
+		.icon-wrap{
+			width: 50px;
+			height: 50px;
+			border: 1px solid var(--base-l-500);
+			border-radius: 50%;
+			font-size: 30px;
+		}
+
+		.title{
+			font-weight: 700;
+		}
+	}
+}

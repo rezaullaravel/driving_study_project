@@ -1,0 +1,160 @@
+// form-control
+
+.form-control {
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--black);
+  line-height: 26px;
+  border: 1px solid #aaa;
+
+  &::placeholder {
+    color: var(--black-l-500) !important;
+    font-size: 14px;
+  }
+
+  &:focus {
+    color: var(--black) !important;
+    box-shadow: none;
+    border: 1px solid var(--base);
+    border-radius: 4px;
+    background-color: transparent;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: #e9e9ea;
+    opacity: 0.7;
+    border: 1px solid #e9e9ea;
+
+  }
+
+  &[type="password"] {
+    color: var(--black-l-500);
+
+    &:focus {
+      color: var(--black);
+    }
+  }
+
+  &[type="file"] {
+    line-height: 48px;
+    padding: 0 !important;
+    position: relative;
+
+    &::file-selector-button {
+
+      border: 1px solid var(--black-l-300);
+      padding: 2px 6px;
+      border-radius: .2em;
+      background-color: var(--base-l-200);
+      transition: .2s linear;
+      line-height: 25px;
+      position: relative;
+      margin-left: 15px;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 12px ;
+
+
+      &:hover {
+        background-color: var(--base-d-200) !important;
+        border: 1px solid var(--base) !important;
+        color: var(--white) !important;
+      }
+    }
+  }
+
+}
+
+.form-control-sm{
+  padding: 6px 16px !important;
+
+  &[type="file"] {
+    line-height: 40px;
+    padding: 0 !important;
+    position: relative;
+
+    &::file-selector-button {
+
+      border: 1px solid var(--black-l-300);
+      padding: 0px 4px;
+      border-radius: .2em;
+      background-color: var(--base-l-200);
+      transition: .2s linear;
+      line-height: 25px;
+      position: relative;
+      top: -2px;
+      margin-left: 10px;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 10px ;
+
+
+      &:hover {
+        background-color: var(--base-d-200) !important;
+        border: 1px solid var(--base) !important;
+        color: var(--white) !important;
+      }
+    }
+  }
+}
+
+.form-control-xsm{
+  padding: 4.5px 16px !important;
+}
+
+// select
+
+.form-select {
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--black);
+  line-height: 26px;
+  border: 1px solid #aaa;
+
+
+  &:focus {
+    color: var(--black) !important;
+    box-shadow: none;
+    border: 1px solid var(--base);
+    border-radius: 4px;
+    background-color: transparent;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--black-l-100);
+    opacity: 1;
+  }
+
+
+
+
+}
+
+// Show Hide Password
+.password-show-hide {
+  position: absolute;
+  right: 20px;
+  z-index: 3;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  color: hsl(var(--black)/.5);
+}
+
+
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: var(--base-d-200) !important;
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: var(--base-d-200) !important;
+}

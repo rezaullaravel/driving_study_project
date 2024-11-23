@@ -1,0 +1,118 @@
+/*
+	Spacing	Doc: 
+	mt pt py my
+	18px 22px 40px 52px 72px
+
+
+ 
+*/
+// Padding and Margin values
+$spacing-values: (
+	'18': (
+		default: 18px,
+		lg: 14px,
+		md: 10px,
+	),
+	'22': (
+		default: 22px,
+		lg: 18px,
+		md: 14px,
+	),
+	'40': (
+		default: 40px,
+		'2xl': 30px,
+		lg: 20px,
+		md: 15px,
+		sm: 10px,
+	),
+	'52': (
+		default: 52px,
+		'2xl': 40px,
+		lg: 30px,
+		md: 20px,
+		sm: 15px,
+	),
+	'72': (
+		default: 72px,
+		'2xl': 50px,
+		lg: 40px,
+		md: 30px,
+		sm: 20px,
+	),
+);
+
+// Generate Padding classes
+@each $key, $values in $spacing-values {
+	.pt-#{$key} {
+		padding-top: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					padding-top: $size;
+				}
+			}
+		}
+	}
+
+	.pb-#{$key} {
+		padding-bottom: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					padding-bottom: $size;
+				}
+			}
+		}
+	}
+
+	.py-#{$key} {
+		padding-top: map-get($values, 'default');
+		padding-bottom: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					padding-top: $size;
+					padding-bottom: $size;
+				}
+			}
+		}
+	}
+}
+
+// Generate Margin classes
+@each $key, $values in $spacing-values {
+	.mt-#{$key} {
+		margin-top: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					margin-top: $size;
+				}
+			}
+		}
+	}
+
+	.mb-#{$key} {
+		margin-bottom: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					margin-bottom: $size;
+				}
+			}
+		}
+	}
+
+	.my-#{$key} {
+		margin-top: map-get($values, 'default');
+		margin-bottom: map-get($values, 'default');
+		@each $breakpoint, $size in $values {
+			@if $breakpoint != 'default' {
+				@include responsive($breakpoint) {
+					margin-top: $size;
+					margin-bottom: $size;
+				}
+			}
+		}
+	}
+}

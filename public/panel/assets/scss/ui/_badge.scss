@@ -1,0 +1,63 @@
+.badge {
+	border-radius: 4px;
+	display: flex;
+	padding: 4px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Plus Jakarta Sans';
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	width: fit-content;
+
+	&.text-bg-base {
+        color: var(--white) !important;
+        background-color: var(--base) !important;
+    }
+
+    &.text-bg-primary {
+        color: var(--white) !important;
+        background-color: var(--primary) !important;
+    }
+
+    &.text-bg-secondary {
+        color: var(--white) !important;
+        background-color: var(--secondary) !important;
+    }
+
+    &.text-bg-success {
+        color: var(--white) !important;
+        background-color: var(--success) !important;
+    }
+
+    &.text-bg-danger {
+        color: var(--white) !important;
+        background-color: var(--danger) !important;
+    }
+
+    &.text-bg-warning {
+        color: var(--black) !important;
+        background-color: var(--warning) !important;
+    }
+
+    &.text-bg-info {
+        color: var(--black) !important;
+        background-color: var(--info) !important;
+    }
+
+    &.text-bg-violet {
+        color: var(--black) !important;
+        background-color: var(--violet) !important;
+    }
+}
+
+.text-bg-success {
+	color: #fff !important;
+	background-color: #0ed016 !important;
+}
+.text-bg-danger {
+	color: #fff !important;
+	background-color: #f25640 !important;
+}

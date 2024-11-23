@@ -1,0 +1,33 @@
+.table {
+	margin-bottom: 0;
+	thead {
+		th {
+			color: #5e5e5e;
+			font-family: 'Plus Jakarta Sans';
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			padding: 14px;
+			white-space: nowrap;
+		}
+	}
+	tbody {
+		tr:nth-of-type(even) > * {
+			--bs-table-color-type: var(--bs-table-striped-color);
+			--bs-table-bg-type: #f4f5f8;
+		}
+		tr {
+			td {
+				border-bottom-width: 0;
+				color: #242424;
+				font-family: 'Plus Jakarta Sans';
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				padding: 14px;
+			}
+		}
+	}
+}

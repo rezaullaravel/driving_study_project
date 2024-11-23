@@ -1,0 +1,21 @@
+.text-primary {
+	color: var(--primary) !important;
+}
+
+.text-success {
+	color: var(--success) !important;
+}
+.text-danger {
+	color: var(--danger) !important;
+}
+.text-warning {
+	color: var(--warning) !important;
+}
+
+.fw-bold {
+	font-family: 'Plus Jakarta Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}

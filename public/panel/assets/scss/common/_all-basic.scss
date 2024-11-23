@@ -1,0 +1,15 @@
+.main {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	@media screen and (min-width: 992px) {
+		flex-direction: row;
+	}
+	@media screen and (max-width: 1199px) {
+		margin-left: 0px;
+	}
+}
+
+
+.dd-content {
+}

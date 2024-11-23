@@ -1,0 +1,372 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+:root {
+
+	// --heading-font: "Poppins", sans-serif;
+	// --body-font: "Inter", sans-serif;
+	// --digit-font: "digital-clock-font";
+  
+  
+	--heading-one: clamp(1.5rem, 2.8vw + 1rem, 3.75rem);
+	--heading-two: clamp(1.375rem, 1.7vw + 1rem, 2.5rem);
+	--heading-three: clamp(1.25rem, .8vw + 1rem, 1.875rem);
+	--heading-four: clamp(1.125rem, .5vw + 1rem, 1.5rem);
+	--heading-five: clamp(1.0625rem, .3vw + 1rem, 1.25rem);
+	--heading-six: 1.2rem;
+  
+  
+
+	--heading-color: var(--heading-h) var(--heading-s) var(--heading-l);
+  
+  
+  
+	--white: #FFF;
+  
+
+	--light: var(--light-h) var(--light-s) var(--light-l);
+  
+
+	--black: #000;
+  
+	--black-l-100: #1a1a1a;
+	--black-l-200: #333333;
+	--black-l-300: #4d4d4d;
+	--black-l-400: #666666;
+	--black-l-500: #808080;
+	--black-l-600: #999999;
+	--black-l-700: #b3b3b3;
+	--black-l-800: #cccccc;
+	--black-l-900: #e6e6e6;
+
+  
+  
+
+  
+	// multi color
+  
+	--lemon-light: 164, 60%, 90%;
+	--lemon-dark: 148, 100%, 50%;
+  
+	--yellow-dark: 58, 100%, 50%;
+  
+	--pink-light: 281, 100%, 95%;
+	--pink-dark: 295, 100%, 50%;
+  
+	--cyan-light: 203, 100%, 91%;
+	--cyan-dark: 203, 100%, 91%;
+  
+	--blue-light: 221, 100%, 91%;
+	--blue-dark: 221, 100%, 91%;
+  
+  
+	// review star color
+	--star-color: 45, 100%, 50%;
+  
+	--hero-bg: 221, 94%, 93%;
+  
+  
+  
+  
+	--header-box-shadow: 0px -1px 15px 3px hsl(var(--black) /.3);
+	--mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) /.92);
+  
+	--box-shadow: 0px 2px 15px hsl(var(--black) /.05);
+	--gradient-bg: linear-gradient(95.26deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
+  
+	--card-bg: hsl(240, 1%, 15%);
+	--dark-bg: 240, 11%, 14%;
+  
+	--section-bg: 204, 100%, 50%;
+  
+  
+	--header-bg: hsl(240, 1%, 15%);
+	--header--bg: hsl(0, 0%, 11.8%);
+  
+
+
+
+  
+  
+
+	--base: #001394;
+  
+  
+  
+	--base-d-100: #001185;
+	--base-d-200: #000f76;
+	--base-d-300: #000d68;
+	--base-d-400: #000b59;
+	--base-d-500: #000a4a;
+
+  
+	--base-l-100: #1a2b9f;
+	--base-l-200: #3342a9;
+	--base-l-300: #4d5ab4;
+	--base-l-400: #6671bf;
+	--base-l-500: #8089ca;
+
+  
+  
+  
+
+  
+  
+
+	--secondary: #6c757d;
+  
+	--secondary-d-100: #616971;
+	--secondary-d-200: #565e64;
+	--secondary-d-300: #4c5258;
+	--secondary-d-400: #41464b;
+	--secondary-d-500: #41464b;
+  
+	--secondary-l-100: #7b838a;
+	--secondary-l-200: #899197;
+	--secondary-l-300: #989ea4;
+	--secondary-l-400: #a7acb1;
+	--secondary-l-500: #b6babe;
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+
+	--dark: #212529;
+  
+	--dark-d-100: #1e2125;
+	--dark-d-200: #1a1e21;
+	--dark-d-300: #171a1d;
+	--dark-d-400: #141619;
+	--dark-d-500: #111315;
+  
+  
+	--dark-l-100: #373b3e;
+	--dark-l-200: #4d5154;
+	--dark-l-300: #646669;
+	--dark-l-400: #7a7c7f;
+	--dark-l-500: #909294;
+  
+  
+  
+
+	--primary: #007afc;
+  
+  
+	--primary-d-100: #006ee3;
+	--primary-d-200: #0062ca;
+	--primary-d-300: #0055b0;
+	--primary-d-400: #004997;
+	--primary-d-500: #003d7e;
+  
+	--primary-l-100: #1a87fc;
+	--primary-l-200: #3395fd;
+	--primary-l-300: #4da2fd;
+	--primary-l-400: #66affd;
+	--primary-l-500: #80bdfe;
+  
+  
+  
+  
+
+	--success: #0ED016;
+  
+	/*=== Success Darken ===*/
+	--success-d-100: #0dbb14;
+	--success-d-200: #0ba612;
+	--success-d-300: #0a920f;
+	--success-d-400: #087d0d;
+	--success-d-500: #07680b;
+
+	/*=== Success Lighten ===*/
+	--success-l-100: #26d52d;
+	--success-l-200: #3ed945;
+	--success-l-300: #56de5c;
+	--success-l-400: #6ee373;
+	--success-l-500: #87e88b;
+  
+  
+
+	--danger: #f25640;
+  
+	/*=== Danger Darken ===*/
+	--danger-d-100: #da4d3a;
+	--danger-d-200: #c24533;
+	--danger-d-300: #a93c2d;
+	--danger-d-400: #913426;
+	--danger-d-500: #792b20;
+  
+	/*=== danger Lighten ===*/
+	--danger-l-100: #f36753;
+	--danger-l-200: #f57866;
+	--danger-l-300: #f68979;
+	--danger-l-400: #f79a8c;
+	--danger-l-500: #f9aba0;
+  
+  
+	--warning: #ffd66b;
+  
+	/*=== Warning Darken ===*/
+	--warning-d-100: #e6c160;
+	--warning-d-200: #ccab56;
+	--warning-d-300: #b3964b;
+	--warning-d-400: #998040;
+	--warning-d-500: #806b36;
+
+	/*===  Warning Lighten ===*/
+	--warning-l-100: #ffda7a;
+	--warning-l-200: #ffde89;
+	--warning-l-300: #ffe297;
+	--warning-l-400: #ffe6a6;
+	--warning-l-500: #ffebb5;
+  
+  
+  
+  
+
+	--info: #0dcaf0;
+  
+	/*=== Info Darken ===*/
+	--info-d-100: #0cb6d8;
+	--info-d-200: #0aa2c0;
+	--info-d-300: #098da8;
+	--info-d-400: #087990;
+	--info-d-500: #076578;
+
+	/*=== nfo Lighten ===*/
+	--info-l-100: #0dcaf0;
+	--info-l-200: #25cff2;
+	--info-l-300: #3dd5f3;
+	--info-l-400: #56daf5;
+	--info-l-500: #6edff6;
+  
+  
+
+
+  
+
+  
+  
+  
+
+  
+  
+  }
+  
+  ::-webkit-scrollbar {
+	width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px hsl(var(--base)/.2);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: hsl(var(--base)/.7);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: hsl(var(--base));
+  }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+ul,
+li {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	user-select: none;
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+button {
+	color: inherit;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+label {
+    font-size: 14px;
+}
+
+iframe {
+	width: 100%;
+}
+.ru-container {
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-inner-spin-button,
+input[type='time']::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+
+.select2-container .select2-selection--multiple{
+	min-height: 48px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    margin-top: 8px;
+    padding: 3px;
+    line-height: 1.4;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    margin-left: 20px;
+}
+
+.note-editable ul li{
+	list-style: disc;
+    padding-left: 2px;
+    margin-left: 14px;
+}
+
+.note-editable ol li{
+	list-style: decimal;
+    padding-left: 2px;
+    margin-left: 14px;
+}

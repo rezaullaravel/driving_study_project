@@ -1,0 +1,353 @@
+/* dashboard Sidebar Menu Start */
+.dashboard_profile {
+  .sidebar-menu-list__link {
+    color: var(--black);
+
+    &:hover {
+      background: var(--base);
+    }
+  }
+}
+
+.sidebar-menu-list__link.active {
+  position: relative;
+
+  border: 1px solid #DEE1F1;;
+
+
+  .icon {
+    color: var(--base);
+  }
+
+  .text {
+    color:  var(--base);
+  }
+}
+
+.sidebar-menu {
+  padding: 0px 0px 10px 0px;
+  transition: 0.2s linear;
+  border-radius: 8px;
+  background: var(--white);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 289px;
+
+  .logo-wrapper {
+    padding: 40px 28px 0 28px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+
+
+  &.show-sidebar {
+    transform: translateX(0);
+  }
+
+  @include lg-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 320px;
+    transform: translateX(-100%);
+    z-index: 9992;
+    border-radius: 0;
+    background-color: var(--white);
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: var(--base);
+    border: 1px solid var(--base);
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    transition: .2s linear;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+    border-radius: 3px;
+
+    @include lg-screen {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--base);
+      border-color: var(--base);
+      color: var(--black);
+    }
+  }
+
+
+  &-list {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0px 0px 120px 0px;
+    position: relative;
+
+
+
+    &__item {
+      margin: 0px 28px 8px 28px;
+
+      &.has-dropdown {
+        &.active {
+          background-color: var(--white);
+          border-radius: 4px;
+          >a {
+            color: #DEE1F1;
+
+
+
+            &:after {
+              transform: rotate(90deg);
+              margin-left: 14px;
+              color: #9E9E9E;
+
+            }
+          }
+        }
+
+        >a {
+          &:after {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f105";
+            font-style: normal;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            text-align: center;
+            background: 0 0;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: 0.1s linear;
+            margin-left: 14px;
+            color: #9E9E9E;
+
+          }
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 16px;
+
+      gap: 12px;
+      position: relative;
+      padding: 10px 20px 10px 20px;
+      width: 100%;
+      color: var(--white) !important;
+      border: 1px solid transparent;
+
+      &:hover {
+        border: 1px solid #DEE1F1;
+        color: #DEE1F1;
+        border-radius: 16px;
+      }
+
+      .icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border-radius: 4px;
+        animation: swing ease-in-out 0.5s 1 alternate;
+        color: #9E9E9E;
+      }
+
+      .text{
+        color: #9E9E9E;
+
+      }
+    }
+  }
+}
+
+/*=============== Sidebar Submenu Start ===============*/
+.sidebar-submenu {
+  display: none;
+  position: relative;
+
+  &.open-submenu {
+    display: block;
+  }
+
+  &-list {
+    padding: 5px 0;
+
+    &__item {
+      position: relative;
+
+    
+
+      &.active {
+        &::before {
+          background: var(--base) !important;
+        }
+
+        >a {
+          color: var(--base);
+        }
+      }
+    }
+
+    &__link {
+      margin: 0px 20px 8px 24px !important;
+      padding: 12px 0px 12px 16px;
+      display: block;
+      color: var(--black);
+      border-bottom: 0 !important;
+      &:hover{
+        background: #e9e9ea;
+        border-radius: 4px;
+        color: var(--base);
+      }
+
+      &.active{
+        border-bottom: 1px solid #9E9E9E !important;
+        border-radius: 0px;
+        &:hover{
+          background: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*========  responsive sidebar menu  =======*/
+.sidebar-menu-wrapper {
+  width: 300px;
+  height: 100vh;
+  background-color: var(--dark);
+  position: fixed;
+  z-index: 15;
+  left: -320px;
+  transition: all .4s ease-in-out;
+
+  &.show {
+    left: 0;
+  }
+
+  .top-close {
+    margin-top: 21px;
+    text-align: end;
+    margin-right: 24px;
+
+    i {
+      font-size: 22px;
+      color: var(--white);
+    }
+  }
+
+  .header-wrapper .logo-wrapper img {
+    width: 130px;
+    margin-left: 6px;
+
+    @include md-screen {
+      margin-left: 15px;
+    }
+
+    @include msm-screen {
+      margin-left: 6px;
+    }
+  }
+}
+
+.sidebar-menu-list__item .btn.btn--base {
+  border: 1px solid var(--white);
+}
+
+.sidebar-menu-list__item {
+  a {
+    span {
+      color: var(--black);
+    }
+  }
+}
+
+
+
+.dashboard-body {
+
+
+  position: relative;
+  &__bar {
+
+      display: none;
+      @include lg-screen {
+          display: block;
+      }
+      &-icon {
+          color: var(--white);
+          font-size: 25px;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          background-color: var(--base);
+          text-align: center;
+          padding: 2px 8px;
+          border-radius: 3px;
+          i{
+            line-height: 1.5;
+          }
+      }
+  }
+}
